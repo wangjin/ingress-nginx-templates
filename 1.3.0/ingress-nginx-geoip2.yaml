@@ -512,7 +512,7 @@ spec:
           secretName: ingress-nginx-admission
       - name: ingress-nginx-geoip
         persistentVolumeClaim:
-        claimName: ingress-nginx
+          claimName: ingress-nginx
 ---
 apiVersion: batch/v1
 kind: Job
