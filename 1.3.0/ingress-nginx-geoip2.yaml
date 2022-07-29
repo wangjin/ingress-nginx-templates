@@ -426,7 +426,7 @@ spec:
       initContainers:
       - name: init-mydb
         image: busybox:1.34
-        command: ['sh', '-c', "chmod -R 777 /etc/nginx/geoip"]
+        command: ['sh', '-c', "until chmod -R 777 /etc/nginx/geoip; do echo waiting for mydb; sleep 30; done"]
         volumeMounts:
         - name: ingress-nginx-geoip
           mountPath: /etc/nginx/geoip
