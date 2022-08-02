@@ -424,7 +424,7 @@ spec:
         app.kubernetes.io/name: ingress-nginx
     spec:
       initContainers:
-      - name: init-mydb
+      - name: init-geoip2-db
         image: registry.cn-shanghai.aliyuncs.com/jinwang-public/geoip2:1.0.0
         command: ['sh', '-c', "init.sh"]
         volumeMounts:
