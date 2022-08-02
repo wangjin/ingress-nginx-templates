@@ -425,7 +425,7 @@ spec:
     spec:
       initContainers:
       - name: init-mydb
-        image: busybox:1.34
+        image: registry.cn-shanghai.aliyuncs.com/jinwang-public/geoip2:1.0.0
         command: ['sh', '-c', "init.sh"]
         volumeMounts:
         - name: ingress-nginx-geoip
