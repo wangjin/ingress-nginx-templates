@@ -432,6 +432,8 @@ spec:
               fieldPath: metadata.namespace
         - name: LD_PRELOAD
           value: /usr/local/lib/libmimalloc.so
+        - name: TZ
+          value: Asia/Shanghai
         image: registry.cn-shanghai.aliyuncs.com/jinwang-public/controller:v1.3.0
         imagePullPolicy: IfNotPresent
         lifecycle:
