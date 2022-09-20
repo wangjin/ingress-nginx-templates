@@ -438,7 +438,6 @@ spec:
         - --validating-webhook-certificate=/usr/local/certificates/cert
         - --validating-webhook-key=/usr/local/certificates/key
         - --tcp-services-configmap=$(POD_NAMESPACE)/tcp-services-configmap
-        - --default-backend-service=$(POD_NAMESPACE)/nginx-errors
         env:
         - name: POD_NAME
           valueFrom:
