@@ -437,7 +437,7 @@ spec:
         - --controller-class=k8s.io/ingress-nginx
         - --ingress-class=nginx
         - --configmap=$(POD_NAMESPACE)/ingress-nginx-controller
-        - --validating-webhook=:89090
+        - --validating-webhook=:8443
         - --validating-webhook-certificate=/usr/local/certificates/cert
         - --validating-webhook-key=/usr/local/certificates/key
         env:
@@ -476,7 +476,7 @@ spec:
         - containerPort: 9090
           name: https
           protocol: TCP
-        - containerPort: 89090
+        - containerPort: 8443
           name: webhook
           protocol: TCP
         readinessProbe:
