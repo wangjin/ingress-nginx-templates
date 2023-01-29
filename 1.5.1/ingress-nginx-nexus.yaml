@@ -395,7 +395,7 @@ spec:
   ports:
   - appProtocol: https
     name: https-webhook
-    port: 9090
+    port: 443
     targetPort: webhook
   selector:
     app.kubernetes.io/component: controller
